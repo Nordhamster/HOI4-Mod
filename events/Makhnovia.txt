@@ -1,0 +1,52 @@
+﻿###########################
+# Makhnovia Events
+###########################
+
+add_namespace = makhnovia
+
+country_event = {
+	id = makhnovia.1
+	title = makhnovia.1.t
+	desc = makhnovia.1.d
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = UKR
+		AND = {
+			UKR = { has_government = anarchy }
+			MKH = { has_government = anarchy }
+		}
+	}
+
+		option = { # annex
+			name = makhnovia.1.a
+			annex_country = {target = MKH
+		}
+	}
+}
+
+country_event = {
+	id = makhnovia.2
+	title = makhnovia.2.t
+	desc = makhnovia.2.d
+	picture = GFX_report_event_hitler_handshake
+
+	mean_time_to_happen = {
+		days = 30
+		}
+	
+	trigger = {
+	tag = MKH
+		AND = {
+			UKR = { has_government = anarchy }
+			MKH = { has_government = anarchy }
+		}
+}
+	option = { # annex
+		name = makhnovia.2.a
+		annex_country = {target = UKR}
+		set_cosmetic_tag = makhno
+	}
+}
