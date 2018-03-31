@@ -12,6 +12,9 @@ ideologies = {
 		
 			centrism = {
 			}
+			
+			moderatism = {
+			}
 
 			socialism = {
 			}
@@ -37,8 +40,8 @@ ideologies = {
 			can_guarantee_other_ideologies = yes
 		}
 		
-		war_impact_on_world_tension = 0.75
-		faction_impact_on_world_tension = -0.1
+		war_impact_on_world_tension = 0.5
+		faction_impact_on_world_tension = 0.3
 		
 		modifiers = {
 			generate_wargoal_tension = 1.00
@@ -87,7 +90,7 @@ ideologies = {
 		
 		color = { 255 0 0 }
 		
-		war_impact_on_world_tension = 0.75		#Commie less threatening
+		war_impact_on_world_tension = 0.75
 		faction_impact_on_world_tension = 0.5
 		
 		ai_communist = yes # uses the commie AI behaviour
@@ -209,9 +212,6 @@ ideologies = {
 			oligarchism  = {
 			}
 			
-			moderatism = {
-			}
-			
 		}
 
 		dynamic_faction_names = {
@@ -222,11 +222,11 @@ ideologies = {
 			"FACTION_NAME_NONALIGNED_5"
 		}
 		
-		color = { 124 124 124 }
+		color = { 255 255 255 }
 		
 		
-		war_impact_on_world_tension = 0.25		#no major danger
-		faction_impact_on_world_tension = 0.1
+		war_impact_on_world_tension = 0.5
+		faction_impact_on_world_tension = 0.5
 		
 		rules = {
 			can_force_government = no
