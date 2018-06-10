@@ -1,0 +1,74 @@
+﻿###########################
+# White Remnants Events
+###########################
+
+add_namespace = white
+
+# Whites are Defeated
+country_event = {
+	id = white.1
+	title = white.1.t
+	desc = white.1.d
+	picture = report_event_soviet_tanks_snow
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SOV
+		has_idea = white_menace
+		has_government = communist
+		
+		RUS = { 
+			has_capitulated = yes 
+			has_war_with = SOV
+		}
+	}
+
+		option = { # Removes White Menace
+			name = white.1.a
+			remove_ideas = white_menace
+		}
+	}
+
+# Whites don't exist
+country_event = {
+	id = white.2
+	title = white.1.t
+	desc = white.2.d
+	picture = report_event_soviet_tanks_snow
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SOV
+		has_idea = white_menace
+		has_government = communist
+		
+		NOT = { country_tag_exists = RUS }
+	}
+
+		option = { # Removes White Menace
+			name = white.2.a
+			remove_ideas = white_menace
+		}
+	}
+# Soviet union no longer commie
+country_event = {
+	id = white.3
+	title = white.3.t
+	desc = white.3.d
+	picture = report_event_soviet_tank_parade
+	
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = SOV
+		has_idea = white_menace
+		NOT = { has_government = communism }
+	}
+
+		option = { # Removes White Menace
+			name = white.3.a
+			remove_ideas = white_menace
+		}
+	}
