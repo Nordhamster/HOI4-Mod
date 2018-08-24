@@ -98,14 +98,14 @@ ideas = {
 	# Special ones that can be applied on other countries through focus system.
 	country = {
 	
-		nationalism = {
+		dictatorship = {
 			
 			allowed = {
 				always = no
 			}
 
 			allowed_civil_war = {
-				has_government = fascism
+				has_government = dictatorship
 			}
 
 			removal_cost = -1
@@ -114,7 +114,7 @@ ideas = {
 
 			
 			modifier = {
-				fascism_drift = 0.1
+				dictatorship_drift = 0.1
 			}
 		}
 
@@ -125,7 +125,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = communism
+				has_government = collectivism
 			}
 
 			removal_cost = -1
@@ -134,7 +134,27 @@ ideas = {
 			
 			modifier = {
 				#justify_war_goal_time = -0.25
-				communism_drift = 0.1
+				collectivism_drift = 0.1
+			}
+		}
+		
+		traditionalism = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = monarchy
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			
+			modifier = {
+				monarchy_drift = 0.1
 			}
 		}
 
@@ -145,7 +165,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = fascism
+				has_government = dictatorship
 			}
 
 			removal_cost = -1
@@ -153,8 +173,8 @@ ideas = {
 			picture = generic_fascism_drift_bonus
 			
 			modifier = {
-				fascism_drift = 0.1
-				fascism_acceptance = 85
+				dictatorship_drift = 0.1
+				dictatorship_acceptance = 85
 			}
 		}
 		
@@ -166,7 +186,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = communism
+				has_government = collectivism
 			}
 
 			removal_cost = -1
@@ -174,8 +194,8 @@ ideas = {
 			picture = generic_communism_drift_bonus
 			
 			modifier = {
-				communism_drift = 0.1
-				communism_acceptance = 85
+				collectivism_drift = 0.1
+				collectivism_acceptance = 85
 			}
 		}
 		democratic_influence = {
@@ -208,16 +228,16 @@ ideas = {
 				OR = {
 					AND = {
 						tag = GER
-						has_government = fascism
+						has_government = dictatorship
 						SOV = {
-							has_government = communism
+							has_government = collectivism
 						}
 					}
 					AND = {
 						tag = SOV
-						has_government = communism
+						has_government = collectivism
 						GER = {
-							has_government = fascism
+							has_government = dictatorship
 						}
 					}
 				}
@@ -226,8 +246,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				communism_acceptance = 100
-				fascism_acceptance = 100
+				collectivism_acceptance = 100
+				dictatorship_acceptance = 100
 			}
 		}
 		
@@ -239,7 +259,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = communism
+				has_government = collectivism
 			}
 
 			removal_cost = -1
@@ -247,7 +267,7 @@ ideas = {
 			picture = generic_communism_drift_bonus
 			
 			modifier = {
-				communism_drift = 0.1
+				collectivism_drift = 0.1
 			}
 		}
 		
@@ -280,7 +300,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = communism
+				has_government = collectivism
 			}
 		
 			removal_cost = -1
@@ -320,7 +340,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = fascism
+				has_government = dictatorship
 			}
 			
 			removal_cost = -1
@@ -342,8 +362,8 @@ ideas = {
 
 			allowed_civil_war = {
 				OR = {
-					has_government = communism
-					has_government = fascism
+					has_government = collectivism
+					has_government = dictatorship
 				}
 			}
 			
@@ -365,8 +385,8 @@ ideas = {
 
 			allowed_civil_war = {
 				OR = {
-					has_government = communism
-					has_government = fascism
+					has_government = collectivism
+					has_government = dictatorship
 				}
 			}
 			
@@ -388,8 +408,8 @@ ideas = {
 
 			allowed_civil_war = {
 				OR = {
-					has_government = communism
-					has_government = fascism
+					has_government = collectivism
+					has_government = dictatorship
 				}
 			}
 			
@@ -436,7 +456,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = communism
+				has_government = collectivism
 			}
 			
 			removal_cost = -1
@@ -580,12 +600,12 @@ ideas = {
 
 			allowed_civil_war = {
 				NOT = {
-					has_government = communism
+					has_government = collectivism
 				}
 			}
 
 			modifier = {
-				communism_drift = -0.05
+				collectivism_drift = -0.05
 			}
 		}
 
@@ -599,29 +619,12 @@ ideas = {
 
 			allowed_civil_war = {
 				NOT = {
-					has_government = fascism
+					has_government = dictatorship
 				}
 			}
 
 			modifier = {
 				fascism_drift = -0.05
-			}
-		}
-		
-		anarchism_banned = {
-			picture = anti_soviet_pact
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				NOT = {
-					has_government = anarchy
-				}
-			}
-
-			modifier = {
-				anarchy_drift = -0.05
 			}
 		}
 
@@ -928,7 +931,7 @@ ideas = {
 	
 			do_effect = {
 				NOT = {
-					has_government = communism
+					has_government = collectivism
 				}
 			}
 	
@@ -978,34 +981,7 @@ ideas = {
 			}
 		}
 		
-		generic_staunch_monarchist = {
-			
-			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = ROM tag = CZE tag = PRC tag = CHI tag = MAN } }
-				NOT = {
-					has_available_idea_with_traits = { idea = fascist_demagogue limit = 1 }
-				}
-
-			}
-			
-			traits = { staunch_monarchist }
-	
-			on_add = {
-				#country_event = political.7
-			}
-	
-			do_effect = {
-				NOT = {
-					has_government = neutrality
-				}
-			}
-	
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		
-				generic_fascist_demagogue = {
+		generic_fascist_demagogue = {
 			
 			allowed = {
 				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = ROM tag = CZE tag = PRC tag = CHI tag = MAN } }
@@ -1034,34 +1010,7 @@ ideas = {
 	
 			do_effect = {
 				NOT = {
-					has_government = fascism
-				}
-			}
-	
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		
-		generic_anarchist_revolutionary = {
-			
-			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = ROM tag = CZE tag = PRC tag = CHI tag = MAN } }
-				NOT = {
-					has_available_idea_with_traits = { idea = anarchist_revolutionary limit = 1 }
-				}
-
-			}
-			
-			traits = { anarchist_revolutionary }
-	
-			on_add = {
-				#country_event = political.30
-			}
-	
-			do_effect = {
-				NOT = {
-					has_government = anarchy
+					has_government = dictatorship
 				}
 			}
 	

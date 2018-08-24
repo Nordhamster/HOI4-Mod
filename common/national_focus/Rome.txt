@@ -1,0 +1,11 @@
+focus_tree = {
+	id = Rome
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RME
+		}
+	}
+	default = no
+}
